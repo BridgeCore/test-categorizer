@@ -52,31 +52,6 @@ app.post('/send', (req, res, next) => {
     });
 });
 
-app.get('/test/:wid', (req, res, next) => {
-    // console.log(JSON.stringify(req.params));
-    console.log(req.params.wid);
-    const token = conf.get('API_TOKEN');
-    const url = conf.get('WORKSPACE_ENDPOINT') + '/' + req.params.wid + '/all_users';
-    console.log(url);
-    // res.send(url);
-    request({
-        "method": "GET",
-        "url": url,
-        "headers": {
-            'Authorization': `Bearer ${token}`
-        }
-    }, (e, r, b) => {
-        if (!e && r.statusCode == 200) {
-            // var info = JSON.parse(body);
-            console.log(b);
-            res.send(b);
-        } else {
-            console.log(e);
-            res.send(e);
-        }
-    });
-});
-
 app.listen(conf.get('PORT'), () => {
     console.log('server running on port: ' + conf.get('PORT'));
 });
