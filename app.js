@@ -42,6 +42,9 @@ app.post('/send', (req, res, next) => {
         "url": conf.get('API_ENDPOINT') + '/workspaces/' + workspaceID + '/cam/data',
         "headers": {
             'Authorization': 'Bearer ' + conf.get('API_TOKEN')
+        },
+        "json": {
+            'cam_data': data
         }
     }, (e, r, b) => {
         if (!e) {
