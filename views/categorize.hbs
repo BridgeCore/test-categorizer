@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Workspace Categorizer</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">  </script>
+    <script>
+        $(document).ready(function () {
+            var workspaceID, actorID, category;
+            $("#submit").click(function () {
+                user = $("#user").val();
+                pass = $("#password").val();
+                $.post("/send", { workspaceID: workspaceID, actorID: actorID, category: category }, function (data) {
+                    if (data === 'done') {
+                        alert("let's figure out how to close this window: category updated");
+                    } else {
+                        alert('error');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <input type="hidden" name="workspaceID" value="{{workspaceID}}" />
+        <input type="hidden" name="actorID" value="{{actorID}}" />
+
+        <select name="category" form="categorize">
+            <option value="dog">Dog</option>
+            <option value="horse">Horse</option>
+            <option value="cat">Cat</option>
+            <option value="plant">Plant</option>
+            <option value="rock">Rock</option>
+        </select>
+        <input type="submit" id="submit" />
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+    "PORT": 8080,
+    "API_TOKEN": "asdfasdf",
+    "WORKSPACE_ENDPOINT": "https://api.apps.us.bluescape.com/workspaces",
+    "dog": "<dog></dog>",
+    "cat": "<cat></cat>",
+    "horse": "<horse></horse>",
+    "rock": "<rock></rock>",
+    "plant": "<plant></plant>"
+}

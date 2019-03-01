@@ -1,0 +1,32 @@
+{
+  "name": "test-categorizer",
+  "version": "1.0.0",
+  "description": "Test Tool for Bluescape workspace categorizer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BridgeCore/test-categorizer.git"
+  },
+  "keywords": [
+    "bluescape",
+    "workspace",
+    "categorizer",
+    "bcore",
+    "bridgecore"
+  ],
+  "author": "Jake Huffman",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/BridgeCore/test-categorizer/issues"
+  },
+  "homepage": "https://github.com/BridgeCore/test-categorizer#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "nconf": "^0.10.0",
+    "request": "^2.88.0"
+  }
+}
