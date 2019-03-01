@@ -25,6 +25,6 @@ export API_TOKEN=<your api key>
 node app.js
 ```
 # TODO
-[ ] determine how to close this window if it will serve as a popup
-[ ] update the category xml to more representative values
-[ ] update the flow to use oath expiring tokens (maybe, maybe just the real one)
+- [ ] determine how to close this window if it will serve as a popup
+- [ ] update the category xml to more representative values
+- [ ] update the flow to use oath expiring tokens (maybe, maybe just the real one)
