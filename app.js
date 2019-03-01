@@ -37,20 +37,19 @@ app.post('/send', (req, res, next) => {
     var category = querystring.escape(req.body.category);
     var data = categorizer.getData(category);
     console.log(data);
-    res.end('done');
-    // request({
-    //     "method": "PUT", 
-    //     "url": conf.get('WORKSPACE_ENDPOINT') + '/' + workspaceID,
-    //     "headers": {
-    //         'Authorization': 'Bearer ' + conf.get('API_TOKEN')
-    //     }
-    // }, (e, r, b) => {
-    //     if (!e) {
-    //         res.send('done')
-    //     } else {
-    //         res.send(e);
-    //     }
-    // });
+    request({
+        "method": "PUT",
+        "url": conf.get('API_ENDPOINT') + '/workspaces/' + workspaceID + '/cam/data',
+        "headers": {
+            'Authorization': 'Bearer ' + conf.get('API_TOKEN')
+        }
+    }, (e, r, b) => {
+        if (!e) {
+            res.send('done')
+        } else {
+            res.send(e);
+        }
+    });
 });
 
 app.get('/test/:wid', (req, res, next) => {
